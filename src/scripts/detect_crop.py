@@ -1,13 +1,12 @@
 from src.scripts.utils import create_video
+import cv2
+import numpy as np
+from ultralytics import YOLO
+import os
 
 def process_video(input_path: str):
     """Обрабатывает видео."""
-
-    import cv2
-    import numpy as np
-    from ultralytics import YOLO
-    import os
-    
+  
     frames = 'output/frames' # Путь к папке с кадрами
     margin = 20 # Отступ
     frame_num = 100 # Счетчик для наименования кадров
